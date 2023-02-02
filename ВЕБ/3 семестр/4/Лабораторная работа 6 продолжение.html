@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <li >206380@edu.fa.ru</li>
+		<li >204550@edu.fa.ru</li>
+		<li >20650@edu.fa.ru</li>
+		<li >305220@edu.fa.ru</li>
+		<li >111111@edu.fa.ru</li>
+		<li >342451@edu.fa.ru</li>
+    </head>
+    <script>
+        // Задача 7
+        let addition = (spisok2) => {
+            let summa = 0
+			for (let i of spisok2) {
+				summa += i
+			}
+			return summa
+		}
+			
+		let even_numbers = (spisok2) => {
+			spisok2_even_numbers = []
+			for (let i of spisok2) {
+				if (i % 2 == 0) {
+					spisok2_even_numbers.push(i)
+				}
+			}
+			return spisok2_even_numbers
+		}
+			
+		let multiplication_2 = (spisok2) => {
+			spisok2_multiplication_2 = []
+			for (let i of spisok2) {
+				res = i * 2
+				spisok2_multiplication_2.push(res)
+			}
+			return spisok2_multiplication_2
+		}
+        let spisok2 = [-3, -2, -1 , 1, 2,78,453,-67]
+		alert('Сумма = '+addition(spisok2))
+		alert('Начальный список = '+spisok2+' Четные числа = '+even_numbers(spisok2))
+		alert('Начальный спсиок = '+spisok2+' Числа, умноженыу на 2 = '+multiplication_2(spisok2))
+
+        //Задача 8
+        
+        let emails = ['206380@edu.fa.ru', '20650@edu.fa.ru','342451@edu.fa.ru','111111@edu.fa.ru']
+		document.querySelectorAll('li').forEach((element) => { // Проходимся по всем элементам <li>
+			email = element.textContent // Получение значений 
+			for (let i of emails) {
+				if (i == email) {
+					element.style.color = 'green'
+				}
+			}
+				
+		})
+
+    </script>
+</html>

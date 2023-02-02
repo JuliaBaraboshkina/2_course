@@ -1,0 +1,77 @@
+<html>
+<head>   
+</head>  
+<script>
+    //Задача 1
+    var ans=0;
+    var q1 =prompt('Какой сегодня день недели?');
+    if (q1=='суббота'){
+        alert('Верно');
+        ans= ans+1;
+    } else {
+        alert('Не верно');
+    }
+    var q2 =prompt('Какое сейчас время года?');
+    if (q2=='осень'){
+        alert('Верно');
+        ans= ans+1;
+    } else {
+        alert('Не верно');
+    }
+    result1='Правильных ответов - ' + ans
+    alert(result1)
+    
+    //Задача 2
+    let summa=0;
+    for (let i = 1; i<11; i++){
+        alert(i)
+        summa=summa+i
+    }
+    result2='Сумма - ' + summa
+    alert(result2)
+    //Задача 3
+    
+    while(true) {
+    var a = prompt('Если хотите заершить, введите "1"');
+    if(a == 1)  break
+    else {
+        alert('Еще по одной?')
+    }
+    }
+    alert('Конец')
+
+    //Задача 4
+    var n=3
+    for (let i =1; i<3; i++){
+        n=n*i 
+    }
+    result4='Факториал 3 = ' + n
+    alert(result4)
+
+    //Задача 5
+    var name = prompt('Введите фамилию');
+    name2= name.split('').reverse().join('');
+    if (name == name2){
+        alert('Палиндром')
+    }
+    else{
+        alert('Не палиндром')
+    }
+
+    //Задача 6
+    let proverka=0
+    for (let i =2; i<4; i++){
+        for (let j=2; j<i;j++){
+            if (i%j==0){
+                proverka=1
+            }
+            proverka=0
+        }
+        if (proverka==0){
+            result6='Простое число -'+ i
+            alert(result6)
+        }
+        
+    }
+</script>
+</html>

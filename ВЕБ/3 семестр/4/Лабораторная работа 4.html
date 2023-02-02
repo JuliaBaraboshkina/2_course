@@ -1,0 +1,127 @@
+
+<html>
+    <head>
+    </head>
+    <script>
+        //Задача 1
+        let user = {
+        name: "Джон",
+        age: 30
+        };
+        user.sayHi = function() {
+            alert("Привет!");
+        };
+        user.sayHi(); // Привет!
+
+        //Задача 2
+        let customer = {
+		name: 'Юля',
+		last_name: 'Барабошкина',
+		city: 'Moscow',
+		day: 'Sutarday',
+		age: 19};
+        alert(customer.name);
+        alert(customer.last_name);
+        alert(customer.age);
+
+        //Задача 3
+        let visitor1 = {
+		name: 'Юля',
+		day: 'Сегодня'
+	    };
+	
+	    let visitor2 = {
+		    name: 'Лиля',
+		    day: 'Сегодня'
+	    };
+	    let visitor3 = {
+		    name: 'Аня',
+		    day: 'Завтра'
+	    };
+	
+	    let visitors = [visitor1, visitor2,visitor3]
+	
+	    for (let visit of visitors) {
+		    if (visit.day == 'Сегодня') {
+			    alert(visit.name)
+		    }
+	    }
+
+	    let restaurant = {
+		    name: 'Ресторан_A',
+		    specialization: 'Русская кухня'
+	    };
+	
+	    let restaurant2 = {
+		    name: 'Ресторан_B',
+		    specialization: 'Японская кухня'
+	    };
+	    let restaurant3 = {
+		    name: 'Ресторан_С',
+		    specialization: 'Японская кухня'
+	    };
+	
+	    let rest = [restaurant, restaurant2,restaurant3]
+	
+	    for (let res of rest) {
+		    if (res.specialization == 'Японская кухня') {
+			    alert(res.name)
+		    }
+	    }
+        let order1 = {
+		name: 'Юля',
+		ord: 'Чай',
+        nom: 1
+	    };
+	
+	    let order2 = {
+		    name: 'Лиля',
+		    ord: 'Суп',
+            nom:1
+	    };
+	    let order3 = {
+		    name: 'Аня',
+		    ord: 'Чай',
+            nom:2
+	    };
+	
+	    let orders = [order1,order2,order3]
+	
+	    for (let ordd of orders) {
+		    if (ordd.nom == 1) {
+			    alert(ordd.name)
+                alert(ordd.ord)
+		    }
+	    }
+        //Задача 4
+        function Group(names) {
+            this.names = names;
+            this.show = function() {
+                alert(this.names);
+            };
+        }
+        let group = new Group(['Саша','Вова','Руслан','Айдын','Юля', 'Лиля', 'Аня']);
+        group.show()
+        //Задача 5
+        function Student(name) {
+	    this.name = name;
+	    this.certification = []
+
+	    this.sayHi = function() {
+		    alert( "Меня зовут: " + this.name);
+	    };
+	  
+	    this.addMarkForCertification = function(mark) {
+		    this.certification.push(mark)
+            alert( "Балл за аттестацию: " + this.certification);
+	    };
+	  
+	    }
+
+	    let julia = new Student("Юля");
+	    julia.sayHi(); // Меня зовут: Вася
+        julia.addMarkForCertification(100)// Аттестация 100
+
+    </script>
+</html>
+

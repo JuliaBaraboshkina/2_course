@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Juliagram</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <style>
+      body{
+        background-color: darkslategrey;
+        font-family: gabriola;color: white
+      }
+      
+
+  </style>
+  <body >
+    <div style="text-align: center;"class="photoFlower">
+        <img src="image/flower.png" alt="" width="300" height="150" />
+    </div>
+    <div style="text-align: center;"id="root"></div>
+    <script type="text/babel">
+      ReactDOM.render(<h1><font size="10" >News feed</font></h1>, document.getElementById("root"));
+    </script>
+
+    <div style="text-align: center;"class="photo">
+        <img src="image/girl.png" alt="" width="250" height="250" />
+      </div>
+    <script type="text/babel">
+      ReactDOM.render(document.getElementById("photo"));
+    </script>
+ 
+    <div style="text-align: center;"id="like_button_container"></div>
+    <script src="app.js"></script>
+  </body>
+
+</html>

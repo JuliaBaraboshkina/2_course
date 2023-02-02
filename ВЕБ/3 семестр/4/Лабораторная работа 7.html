@@ -1,0 +1,70 @@
+<html>
+    <head>
+    </head>
+    <script>
+        //Задача 1
+
+        const arr1 = [1, 2, 3];
+        const arr2 = arr1.map(item => item * 2);
+        console.log(arr2);
+        alert(arr2);
+
+        //Задача 2
+        const year = [2000, 2001, 2002, 2003];
+        const age = [];
+        for(let i = 0; i < year.length; i++) {
+            let age_2 = 2021 - year[i];
+            age.push(age_2);
+        }
+
+        console.log(age);
+        alert(age);
+
+        //Задача 3
+        const persons = [
+            { name: 'Peter', age: 16, admin:'n'},
+            { name: 'Mark', age: 18, admin:'n'},
+            { name: 'John', age: 27,admin:'y'},
+            { name: 'Jane', age: 14,admin:'n'},
+            { name: 'Tony', age: 24,admin:'y'},
+        ];
+        const adminn = persons.filter(person => person.admin == 'y');
+        console.log(adminn);
+        for(let i = 0; i < adminn.length; i++) {
+            alert(adminn[i].name)
+
+        }
+        //Задача 4
+        mark = [5,5,2,3,5,2,3]
+        const average = mark.reduce(function (avg, currentValue, _, { length }) {
+            return avg + currentValue / length;
+        }, 0);
+        alert(average)
+        
+
+        //Задача 5
+        const strArray = ['JavaScript', 'Python', 'PHP', 'Java', 'C'];
+        function mapForEach(arr, fn) {
+            const newArray = [];
+            for(let i = 0; i < arr.length; i++) {
+                newArray.push(
+                    fn(arr[i])
+                );
+                }   
+                return newArray;
+            }
+        const lenArray = mapForEach(strArray, function(item) {
+            if (item.length <= 3){
+                return 0
+            }
+            else {
+                return 1
+            }
+        });
+        console.log(lenArray);
+        alert(lenArray)
+
+        
+    </script>
+</html>
+

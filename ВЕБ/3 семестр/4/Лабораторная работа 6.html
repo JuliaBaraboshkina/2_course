@@ -1,0 +1,72 @@
+<html>
+    <head>
+    </head>
+    <script>
+        //Задача 1
+        let number1 = prompt('Введите Число 1- ');
+        number1=parseInt(number1);
+        let number2 = prompt('Введите Число 2- ');
+        number2=parseInt(number2);
+        let addition = (x, y) => x + y;
+        let subtraction = (x, y) => x - y;
+		let multiplication = (x, y) => x * y;
+		let division = (x, y) => x / y;
+			
+		alert('Сумма ' + addition(number1, number2));
+        alert('Разность ' + subtraction(number1, number2));
+		alert('Произвделение ' + multiplication(number1, number2));
+		alert('Деление ' + division(number1, number2));
+        // Задача 2
+		let welcome = (age) => {
+			if (age < 18) {
+				alert('Привет')
+			}
+			else {
+				alert("Здравствуйте!")
+			}
+		} 
+
+		let age = prompt("Сколько Вам лет?");
+		welcome(age)
+        
+        //Задача 3
+        let Palind = (name) => {
+                let name2 = name.split('').reverse().join('');
+                if (name == name2) {
+                    return 'Палиндром';
+                }
+                else{
+                    return 'Не палиндром'
+                    }
+         }
+        let name = prompt('Введите имя для проверки на палиндром ');
+        alert( name+ '-' + Palind(name));
+        
+        //Задача 4
+
+        let average_value = (a) => {
+			let summa = 0
+			let kol = 0
+			for (let i of spisok) {
+				summa += i
+				kol++
+			}
+			return summa / kol
+		}
+
+        let spisok = [-3, -2, 0, 1, 2,78,453]
+        alert('Среднее значение =' + average_value(spisok));
+        
+        //Задача 5
+        let days = (date) => 31 - date
+        let date = prompt('День:');
+        dat=parseInt(date);
+		alert('До 31 декабря '+ days(date)+ ' дней')
+
+        //Задача 6
+        let empty = () => {}
+        alert(empty())
+        
+    </script>
+</html>
+
